@@ -108,12 +108,18 @@ int main()
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 		{
 			shapeSprite.move(speed * 0.f, -speed * deltaTime);
-			shapeSprite.setTextureRect(sf::IntRect(spriteSizeX * animationFrame, spriteSizeY * 1, spriteSizeX, spriteSizeY));
+			shapeSprite.setTextureRect(sf::IntRect(spriteSizeX * animationFrame, spriteSizeY * 2, spriteSizeX, spriteSizeY));
+			if (animationFrame >= 4) {
+				animationFrame = 0;
+			}
 		}
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 		{
 			shapeSprite.move(speed * 0.f, speed * deltaTime);
-			shapeSprite.setTextureRect(sf::IntRect(spriteSizeX * animationFrame, spriteSizeY * 1, spriteSizeX, spriteSizeY));
+			shapeSprite.setTextureRect(sf::IntRect(spriteSizeX * animationFrame, spriteSizeY * 2, spriteSizeX, spriteSizeY));
+			if (animationFrame >= 4) {
+				animationFrame = 0;
+			}
 		}
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 		{
